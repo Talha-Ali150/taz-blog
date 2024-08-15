@@ -1,30 +1,24 @@
 import Image from "next/image";
 import React from "react";
+import { colorClasses } from "@/constants/colorClasses";
 
 export default function CategoryBadge({ title, imgSrc, color }) {
-  const colorClasses = {
-    red: "bg-red-300",
-    blue: "bg-blue-300",
-    green: "bg-green-300",
-    yellow: "bg-yellow-300",
-    purple: "bg-purple-300",
-    pink: "bg-pink-300",
-  };
-
   return (
     <div
-      className={`flex justify-center items-center ${colorClasses[color]} w-40 p-2 rounded-lg shadow-md my-10`}
+      className={`flex flex-col sm:flex-row justify-center items-center ${colorClasses[color]} p-4 rounded-lg shadow-md my-4 w-full sm:w-40`}
     >
-      <div className="w-12 h-12 rounded-full overflow-hidden">
+      <div className="w-16 h-16 sm:w-12 sm:h-12 rounded-full overflow-hidden">
         <Image
           src={imgSrc}
-          width={48}
-          height={48}
+          width={64}
+          height={64}
           alt={title}
           className="object-cover"
         />
       </div>
-      <p className="ml-3 text-white font-medium">{title}</p>
+      <p className="mt-4 sm:mt-0 sm:ml-3 text-white font-medium text-center sm:text-left">
+        {title}
+      </p>
     </div>
   );
 }

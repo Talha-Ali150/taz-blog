@@ -10,7 +10,12 @@ export default function Navbar() {
 
   return (
     <div className="flex justify-between items-center p-4">
-      <div className="flex flex-1 justify-center">social icons</div>
+      <div className="flex flex-1 justify-center">social icons
+        {/* facebook
+        instagram
+        tiktok
+        youtube */}
+      </div>
       <div className="flex flex-1 justify-center">logo</div>
       <div className="hidden md:flex flex-1 justify-center list-none gap-6">
         <li>Homepage</li>
