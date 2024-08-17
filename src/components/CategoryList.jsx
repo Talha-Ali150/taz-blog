@@ -15,6 +15,17 @@ export default function CategoryList() {
             color={item.color}
           />
         ))}
+
+        {/* <CategoryBadge
+          title="Style"
+          imgSrc="https://images.pexels.com/photos/792385/pexels-photo-792385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          color="bg-red-300"
+        />
+        <CategoryBadge
+          title="Fashion"
+          imgSrc="https://images.pexels.com/photos/792385/pexels-photo-792385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          color="bg-blue-300"
+        /> */}
       </div>
     </div>
   );

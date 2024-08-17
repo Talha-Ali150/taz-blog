@@ -1,7 +1,6 @@
 import React from "react";
 import MenuCard from "./MenuCard";
 import { data } from "@/constants/data";
-import { colorClasses } from "@/constants/colorClasses";
 
 export default function Menu() {
   return (
@@ -25,9 +24,8 @@ export default function Menu() {
         {data.map((item, index) => (
           <p
             key={index}
-            className={`px-4 py-2 rounded-md text-white ${
-              colorClasses[item.color]
-            }`}
+            style={{ backgroundColor: `${item.color}` }}
+            className={`px-4 py-2 rounded-md text-white`}
           >
             {item.title}
           </p>

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import { colorClasses } from "@/constants/colorClasses";
 
 export default function CategoryBadge({ title, imgSrc, color }) {
   return (
     <div
-      className={`flex flex-col sm:flex-row justify-center items-center ${colorClasses[color]} p-4 rounded-lg shadow-md my-4 w-full sm:w-40`}
+      style={{ backgroundColor: `${color}` }}
+      className={`flex flex-col sm:flex-row justify-center items-center  p-4 rounded-lg shadow-md my-4 w-full sm:w-40`}
     >
       <div className="w-16 h-16 sm:w-12 sm:h-12 rounded-full overflow-hidden">
         <Image

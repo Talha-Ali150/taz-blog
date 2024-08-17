@@ -1,17 +1,17 @@
 import CardList from "@/components/CardList";
-import CategoryList from "@/components/CategoryList";
-import Featured from "@/components/Featured";
 import Footer from "@/components/Footer";
 import Menu from "@/components/Menu";
 import Navbar from "@/components/Navbar";
 import Pagination from "@/components/Pagination";
+import React from "react";
 
-export default function Home() {
+export default function BlogPage() {
   return (
     <div>
       <Navbar />
-      <Featured />
-      <CategoryList />
+      <p className="text-center text-white bg-red-300 p-1 rounded-md w-[80%] mt-4 mx-auto">
+        Style Blog
+      </p>
       <div className="flex flex-col md:flex-row justify-between gap-8 px-4 md:px-8 py-8">
         <div className="w-full md:w-2/3">
           <CardList />
@@ -21,7 +21,7 @@ export default function Home() {
         </div>
       </div>
       <Pagination />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
