@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
 export default function AuthLinks() {
   const {status} = useSession()
@@ -13,7 +13,7 @@ export default function AuthLinks() {
       ) : (
         <>
           <Link href="/write">Write</Link>
-          <span>Logout</span>
+          <span className="cursor-pointer" onClick={signOut}>Logout</span>
         </>
       )}
     </>
