@@ -2,11 +2,21 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function LoginPage() {
   const { data, status } = useSession();
-  console.log(data,status)
+  const router = useRouter();
+
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+  if (status === "authenticated") {
+    router.push("/");
+  }
+
+  console.log(data, status);
   return (
     <div>
       <Navbar />
