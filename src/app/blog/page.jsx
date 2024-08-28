@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Pagination from "@/components/Pagination";
 import React from "react";
 
-export default function BlogPage() {
+export default function BlogPage() {  
   return (
     <div>
       <Navbar />

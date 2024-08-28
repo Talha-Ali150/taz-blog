@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-export default function Card() {
+export default function Card({key}) {
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl my-10">
+    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl my-10" key={key}>
       <div className="md:flex">
         <div className="md:flex-shrink-0">
           <Image

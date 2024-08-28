@@ -20,9 +20,10 @@ const CategoryList = async () => {
       <h3 className="text-3xl text-center my-10">Popular Categories</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
         {data?.map((item) => (
-          <Link href={`/blog?cat=${item.slug}`} key={item._id}>
+          <Link href={`/blog?cat=${item.slug}`}>
             <div
               className={`flex flex-col sm:flex-row justify-center items-center  p-4 rounded-lg shadow-md my-4 w-full sm:w-40 ${item.slug}`}
+              key={item._id}
             >
               <div className="w-16 h-16 sm:w-12 sm:h-12 rounded-full overflow-hidden">
                 {item.img && (
