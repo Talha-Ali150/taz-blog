@@ -1,8 +1,8 @@
 import React from "react";
 import Card from "./Card";
 
-const getData = async () => {
-  const res = await fetch(`http://localhost:3000/api/posts/`, {
+export const getData = async (page) => {
+  const res = await fetch(`http://localhost:3000/api/posts?page=${page}`, {
     cache: "no-store",
   });
   if (!res.ok) {
@@ -11,13 +11,13 @@ const getData = async () => {
   return res.json();
 };
 
-const CardList = async () => {
-  const data = await getData();
+const CardList = async ({ page }) => {
+  const { posts } = await getData(page);
   return (
     <div>
       <h3 className="text-center text-3xl mt-10">Recent Posts</h3>
-      {data.map((item) => {
-        return <Card key={item._id} />;
+      {posts?.map((item) => {
+        return <Card key={item._id} item={item} />;
       })}
     </div>
   );
